@@ -1,17 +1,17 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   Calculator,
   ChevronDown,
   FileText,
   Landmark,
-  Mail,
-  MessageCircle,
   Phone,
   ShieldCheck,
   Smartphone,
   Users,
 } from "lucide-react";
 import Faq from "@/components/Faq";
+import ContactIcons from "@/components/ContactIcons";
 
 const STEPS = [
   {
@@ -89,13 +89,19 @@ export default function HomePage() {
   return (
     <>
       <section className="relative flex min-h-screen items-center overflow-hidden">
-        <div className="absolute inset-0 bg-navy-deep" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(35,164,245,0.45),transparent_45%),radial-gradient(circle_at_80%_10%,rgba(82,168,255,0.35),transparent_40%)]" />
-        <div className="absolute inset-0 bg-navy-deep/50" />
+        <Image
+          src="/hero-bg.jpg"
+          alt=""
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-navy-deep/55" />
 
         <div className="relative mx-auto max-w-4xl px-4 pb-24 pt-32 text-center sm:px-6">
           <h1 className="text-4xl font-extrabold leading-tight text-white sm:text-5xl md:text-6xl">
-            L'expert-comptable à vos côtés, jusqu'au succès.
+            L&apos;expert-comptable à vos côtés, jusqu&apos;au succès.
           </h1>
           <p className="mt-5 text-lg font-semibold text-white/90 sm:text-xl">
             Simplicité. Clarté. Proximité.
@@ -104,13 +110,10 @@ export default function HomePage() {
             Confiez-nous votre comptabilité, fiscalité ou paie/social et
             concentrez-vous sur votre cœur de métier.
           </p>
-          <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Link href="/inscription" className="btn-primary">
-              Nous contacter
+          <div className="mt-10 flex justify-center">
+            <Link href="/devis" className="btn-primary">
+              Devis gratuit
             </Link>
-            <a href="tel:+212603791489" className="btn-secondary">
-              +212 603-791489
-            </a>
           </div>
         </div>
 
@@ -129,7 +132,7 @@ export default function HomePage() {
             AC Expertises et Conseils
           </p>
           <p className="mt-2 text-sm text-slate-500 sm:text-base">
-            Cabinet d'expertise comptable et de conseil — Casablanca, Maroc
+            Cabinet d&apos;expertise comptable et de conseil — Casablanca, Maroc
           </p>
         </div>
       </section>
@@ -161,7 +164,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className="section-kicker">Pourquoi AC Expertises ?</p>
-            <h2 className="section-title">L'externalisation de votre comptabilité, réinventée</h2>
+            <h2 className="section-title">L&apos;externalisation de votre comptabilité, réinventée</h2>
           </div>
           <div className="mt-12 grid gap-4 md:grid-cols-6">
             {REASONS.map((item, index) => (
@@ -211,7 +214,7 @@ export default function HomePage() {
             </h2>
             <p className="mt-5 text-white/75">
               Libérez-vous des tâches comptables et fiscales. Un conseiller vous
-              accompagne, de la première prise de contact jusqu'au suivi de
+              accompagne, de la première prise de contact jusqu&apos;au suivi de
               votre activité.
             </p>
           </div>
@@ -225,26 +228,13 @@ export default function HomePage() {
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
           <h2 className="text-3xl font-extrabold text-navy">Prêt à clarifier votre comptabilité ?</h2>
           <p className="mt-3 text-slate-600">
-            Un conseiller vous répond par téléphone, WhatsApp ou e-mail.
+            Demandez un devis gratuit : un conseiller vous rappelle sous 24 heures.
           </p>
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <a href="tel:+212603791489" className="btn-primary">
-              <Phone size={18} />
-              +212 603-791489
-            </a>
-            <a href="mailto:Adamodessouza4545@gmail.com" className="btn-outline">
-              <Mail size={18} />
-              Adamodessouza4545@gmail.com
-            </a>
-            <a
-              href="https://wa.me/212603791489"
-              target="_blank"
-              rel="noreferrer"
-              className="btn-outline"
-            >
-              <MessageCircle size={18} />
-              WhatsApp
-            </a>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+            <Link href="/devis" className="btn-primary">
+              Devis gratuit
+            </Link>
+            <ContactIcons />
           </div>
           <p className="mt-6 flex items-center justify-center gap-2 text-sm text-slate-500">
             <Smartphone size={16} />

@@ -38,11 +38,11 @@ export default function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
         <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
           <Image
-            src="/logo.jpg"
+            src="/logo.png"
             alt="AC Expertises et Conseils"
-            width={220}
-            height={72}
-            className="h-11 w-auto rounded-md bg-white object-contain p-0.5 sm:h-12"
+            width={280}
+            height={80}
+            className="h-12 w-auto object-contain sm:h-14"
             priority
           />
         </Link>
@@ -56,8 +56,8 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Link href="/inscription" className="btn-primary hidden px-5 py-2.5 sm:inline-flex">
-            Nous contacter
+          <Link href="/devis" className="btn-primary hidden px-5 py-2.5 sm:inline-flex">
+            Devis gratuit
           </Link>
           <button
             type="button"
@@ -78,8 +78,8 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-            <Link href="/inscription" className="btn-primary mt-2" onClick={() => setOpen(false)}>
-              Nous contacter
+            <Link href="/devis" className="btn-primary mt-2" onClick={() => setOpen(false)}>
+              Devis gratuit
             </Link>
           </nav>
         </div>

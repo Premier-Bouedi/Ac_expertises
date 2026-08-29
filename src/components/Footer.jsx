@@ -8,11 +8,11 @@ export default function Footer() {
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-3">
         <div>
           <Image
-            src="/logo.jpg"
+            src="/logo.png"
             alt="AC Expertises et Conseils"
-            width={220}
-            height={72}
-            className="h-14 w-auto rounded-md bg-white object-contain p-1"
+            width={280}
+            height={80}
+            className="h-14 w-auto object-contain"
           />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/80">
             Cabinet d&apos;expertise comptable et de conseil au Maroc. Nous
@@ -37,6 +37,11 @@ export default function Footer() {
             <li>
               <Link href="/#services" className="hover:text-white">
                 Services
+              </Link>
+            </li>
+            <li>
+              <Link href="/devis" className="hover:text-white">
+                Devis gratuit
               </Link>
             </li>
             <li>

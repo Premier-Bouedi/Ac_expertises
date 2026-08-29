@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Mail, MessageCircle, Phone, ArrowUpRight, ShieldCheck, Clock } from "lucide-react";
 
 const PHONE_DISPLAY = "+212 603-791489";
@@ -16,8 +17,12 @@ export default function InscriptionPage() {
             Parlons de votre entreprise
           </h1>
           <p className="mt-4 text-lg text-slate-300">
-            Un conseiller vous répond par téléphone, WhatsApp ou e-mail.
+            Un conseiller vous répond par téléphone, WhatsApp ou e-mail. Pour un
+            devis, utilisez le formulaire dédié.
           </p>
+          <Link href="/devis" className="btn-primary mt-6 inline-flex">
+            Devis gratuit
+          </Link>
         </div>
       </section>
 

@@ -13,11 +13,11 @@ const ITEMS = [
     q: "2. Comment devenir client ?",
     a: (
       <>
-        Contactez-nous par téléphone, WhatsApp ou e-mail. Un expert dédié vous
+        Remplissez le formulaire de devis gratuit. Un expert dédié vous
         rappelle sous 24 heures pour vous transmettre une proposition adaptée à
         vos besoins.{" "}
-        <Link href="/inscription" className="font-bold text-brand hover:underline">
-          Voir le contact
+        <Link href="/devis" className="font-bold text-brand hover:underline">
+          Demander un devis gratuit
         </Link>
         .
       </>
