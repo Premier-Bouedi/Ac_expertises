@@ -3,9 +3,9 @@ import { Check } from "lucide-react";
 import DevisForm from "@/components/DevisForm";
 
 const BENEFITS = [
-  "Suivi comptable et fiscal clair, adapté au Maroc",
+  "Suivi comptable et fiscal clair, adapté à votre pays",
   "Un conseiller dédié, joignable et réactif",
-  "Paie, CNSS et déclarations sans friction",
+  "Paie, social et déclarations sans friction",
   "Création d'entreprise et formalités administratives",
   "Devis gratuit, sans engagement",
 ];

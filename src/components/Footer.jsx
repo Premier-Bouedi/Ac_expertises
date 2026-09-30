@@ -15,9 +15,9 @@ export default function Footer() {
             className="h-14 w-auto object-contain"
           />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/80">
-            Cabinet d&apos;expertise comptable et de conseil au Maroc. Nous
-            accompagnons les entrepreneurs, SARL et auto-entrepreneurs dans leur
-            gestion quotidienne.
+            Cabinet d&apos;expertise comptable et de conseil, partout dans le
+            monde. Nous accompagnons les entrepreneurs, sociétés et
+            auto-entrepreneurs dans leur gestion quotidienne.
           </p>
         </div>
 
@@ -57,7 +57,7 @@ export default function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-white/80">
             <li className="flex items-start gap-2">
               <MapPin size={16} className="mt-0.5 shrink-0" />
-              Casablanca, Maroc
+              Partout dans le monde
             </li>
             <li className="flex items-center gap-2">
               <Phone size={16} className="shrink-0" />

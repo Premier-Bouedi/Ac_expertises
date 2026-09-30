@@ -7,7 +7,7 @@ import Link from "next/link";
 const ITEMS = [
   {
     q: "1. Pourquoi choisir AC Expertises et Conseils ?",
-    a: "Nous vous proposons un accompagnement clair en comptabilité, fiscalité, paie et création d'entreprise, avec un conseiller joignable et ancré dans le contexte fiscal marocain.",
+    a: "Nous vous proposons un accompagnement clair en comptabilité, fiscalité, paie et création d'entreprise, avec un conseiller joignable, où que vous soyez dans le monde.",
   },
   {
     q: "2. Comment devenir client ?",
@@ -25,11 +25,11 @@ const ITEMS = [
   },
   {
     q: "3. Puis-je parler à mon expert-comptable ?",
-    a: "Oui. Vous pouvez joindre votre conseiller par téléphone, WhatsApp ou e-mail. Un rendez-vous à Casablanca est également possible.",
+    a: "Oui. Vous pouvez joindre votre conseiller par téléphone, WhatsApp ou e-mail, où que vous soyez. Un rendez-vous en visio ou en présentiel est également possible.",
   },
   {
     q: "4. Quels services proposez-vous ?",
-    a: "Comptabilité et fiscalité (TVA, IS, IR, bilans), création d'entreprise, gestion de la paie et CNSS, ainsi que le conseil juridique et administratif.",
+    a: "Comptabilité et fiscalité (TVA, impôts, bilans), création d'entreprise, gestion de la paie et du social, ainsi que le conseil juridique et administratif.",
   },
 ];
 

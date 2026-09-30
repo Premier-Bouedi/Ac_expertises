@@ -29,35 +29,35 @@ const STEPS = [
   {
     n: "03",
     title: "Vous pilotez sereinement",
-    text: "Un conseiller dédié, joignable et réactif, pour suivre votre activité au Maroc.",
+    text: "Un conseiller dédié, joignable et réactif, pour suivre votre activité où que vous soyez.",
     icon: ShieldCheck,
   },
 ];
 
 const REASONS = [
   {
-    title: "Cabinet d'expertise comptable",
-    text: "Un accompagnement professionnel pour les entrepreneurs, SARL et auto-entrepreneurs.",
+    title: "Comptabilité en ligne",
+    text: "Saisie, bilans, déclarations, suivi mensuel.",
     color: "bg-[#98333c]",
   },
   {
-    title: "Suivi clair et réactif",
-    text: "Vos déclarations, bilans et échéances suivis avec un conseiller dédié.",
+    title: "Pilotage financier",
+    text: "Tableaux de bord, trésorerie, analyse de rentabilité.",
     color: "bg-[#f84950]",
   },
   {
-    title: "Échanges simples",
-    text: "WhatsApp, e-mail, téléphone ou rendez-vous : vous nous joignez comme vous voulez.",
+    title: "Business plan et financement",
+    text: "Dossiers prêts pour banques, fonds et investisseurs.",
     color: "bg-[#5A2ED3]",
   },
   {
-    title: "Fiscalité marocaine",
-    text: "TVA, IS, IR, CNSS et formalités adaptées à votre forme juridique.",
+    title: "Audit et diagnostic",
+    text: "Revue de vos comptes, contrôle interne, conformité.",
     color: "bg-[#1349bf]",
   },
   {
-    title: "Conseiller dédié",
-    text: "Un interlocuteur unique pour un accompagnement personnalisé, jusqu'au succès.",
+    title: "Création et formalisation",
+    text: "Structuration juridique, fiscale et comptable.",
     color: "bg-[#f58e27]",
   },
 ];
@@ -75,13 +75,13 @@ const SERVICES = [
   },
   {
     icon: Users,
-    title: "Gestion de la Paie & CNSS",
-    text: "Bulletins de paie, déclarations sociales et suivi CNSS sans friction.",
+    title: "Gestion de la Paie & Social",
+    text: "Bulletins de paie, déclarations sociales et suivi administratif sans friction.",
   },
   {
     icon: FileText,
     title: "Conseil juridique & administratif",
-    text: "Modifications statutaires, contrats et formalités administratives au Maroc.",
+    text: "Modifications statutaires, contrats et formalités administratives, où que vous soyez.",
   },
 ];
 
@@ -132,7 +132,7 @@ export default function HomePage() {
             AC Expertises et Conseils
           </p>
           <p className="mt-2 text-sm text-slate-500 sm:text-base">
-            Cabinet d&apos;expertise comptable et de conseil — Casablanca, Maroc
+            Cabinet d&apos;expertise comptable et de conseil — partout dans le monde
           </p>
         </div>
       </section>
@@ -170,9 +170,8 @@ export default function HomePage() {
             {REASONS.map((item, index) => (
               <article
                 key={item.title}
-                className={`${item.color} min-h-[220px] rounded-2xl p-7 text-white ${
-                  index < 3 ? "md:col-span-2" : "md:col-span-3"
-                }`}
+                className={`${item.color} min-h-[220px] rounded-2xl p-7 text-white ${index < 3 ? "md:col-span-2" : "md:col-span-3"
+                  }`}
               >
                 <h3 className="text-xl font-extrabold">{item.title}</h3>
                 <p className="mt-4 text-sm leading-relaxed text-white/90">{item.text}</p>
