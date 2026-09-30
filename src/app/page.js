@@ -5,6 +5,7 @@ import {
   ChevronDown,
   FileText,
   Landmark,
+  LineChart,
   Phone,
   ShieldCheck,
   Smartphone,
@@ -72,6 +73,11 @@ const SERVICES = [
     icon: Landmark,
     title: "Création d'entreprise",
     text: "Statuts, registre de commerce, patente et accompagnement jusqu'au lancement.",
+  },
+  {
+    icon: LineChart,
+    title: "Contrôle de gestion externalisée",
+    text: "Un accompagnement complet du processus de production et gestion de coût de production et suivi du seuil budgétaire.",
   },
   {
     icon: Users,
@@ -187,7 +193,7 @@ export default function HomePage() {
             <p className="section-kicker">Services</p>
             <h2 className="section-title">Un accompagnement complet</h2>
           </div>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map(({ icon: Icon, title, text }) => (
               <article key={title} className="rounded-2xl bg-white p-6 shadow-card">
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-brand/10 text-brand">
@@ -209,7 +215,7 @@ export default function HomePage() {
             </p>
             <h2 className="mt-3 text-3xl font-extrabold text-white md:text-4xl">
               AC Expertises,
-              <span className="mt-2 block text-brand-light">votre expert-comptable</span>
+              <span className="mt-2 block text-brand-light">Des finances claires pour des PME qui grandissent</span>
             </h2>
             <p className="mt-5 text-white/75">
               Libérez-vous des tâches comptables et fiscales. Un conseiller vous
