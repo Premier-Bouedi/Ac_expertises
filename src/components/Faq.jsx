@@ -2,34 +2,27 @@
 
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import Link from "next/link";
 
 const ITEMS = [
   {
-    q: "1. Pourquoi choisir AC Expertises et Conseils ?",
-    a: "Nous vous proposons un accompagnement clair en comptabilité, fiscalité, paie et création d'entreprise, avec un conseiller joignable, où que vous soyez dans le monde.",
+    q: "Vous ne savez pas vraiment si votre entreprise gagne de l'argent ?",
+    a: "Nous mettons en place des tableaux de bord clairs et un suivi régulier pour que vous connaissiez toujours la rentabilité exacte de votre activité en temps réel.",
   },
   {
-    q: "2. Comment devenir client ?",
-    a: (
-      <>
-        Remplissez le formulaire de devis gratuit. Un expert dédié vous
-        rappelle sous 24 heures pour vous transmettre une proposition adaptée à
-        vos besoins.{" "}
-        <Link href="/devis" className="font-bold text-brand hover:underline">
-          Demander un devis gratuit
-        </Link>
-        .
-      </>
-    ),
+    q: "Votre comptabilité est en retard, ou faite uniquement pour la déclaration fiscale ?",
+    a: "Nous prenons en charge la saisie au fil de l'eau. Votre comptabilité devient un véritable outil de pilotage disponible toute l'année, et plus seulement une obligation de fin d'année.",
   },
   {
-    q: "3. Puis-je parler à mon expert-comptable ?",
-    a: "Oui. Vous pouvez joindre votre conseiller par téléphone, WhatsApp ou e-mail, où que vous soyez. Un rendez-vous en visio ou en présentiel est également possible.",
+    q: "Les banques et investisseurs refusent vos dossiers faute de chiffres fiables ?",
+    a: "Nos experts élaborent des prévisionnels solides et des dossiers financiers irréprochables qui inspirent confiance à tous vos partenaires (banques, fonds, investisseurs).",
   },
   {
-    q: "4. Quels services proposez-vous ?",
-    a: "Comptabilité et fiscalité (TVA, impôts, bilans), création d'entreprise, gestion de la paie et du social, ainsi que le conseil juridique et administratif.",
+    q: "Vous craignez un contrôle fiscal ou des pénalités ?",
+    a: "Grâce à notre veille réglementaire et à nos diagnostics rigoureux, nous garantissons la parfaite conformité de vos comptes. Soyez serein, nous sécurisons vos déclarations.",
+  },
+  {
+    q: "Vous n'avez pas les moyens d'un cabinet classique ?",
+    a: "Notre modèle d'externalisation optimisé nous permet de vous proposer un accompagnement sur-mesure de très haute qualité, à des tarifs transparents, flexibles et maîtrisés.",
   },
 ];
 
