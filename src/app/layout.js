@@ -13,7 +13,7 @@ const nunito = Nunito({
 export const metadata = {
   title: "AC Expertises et Conseils | Expert-comptable",
   description:
-    "Cabinet d'expertise comptable et de conseil, partout dans le monde. Comptabilité, fiscalité, paie et création d'entreprise. Contactez-nous pour un devis gratuit.",
+    "Cabinet d'expertise comptable et de conseil, casablanca . Comptabilité, fiscalité, paie et création d'entreprise. Contactez-nous pour un devis gratuit.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },

@@ -138,7 +138,7 @@ export default function HomePage() {
             AC Expertises et Conseils
           </p>
           <p className="mt-2 text-sm text-slate-500 sm:text-base">
-            Cabinet d&apos;expertise comptable et de conseil — partout dans le monde
+            Cabinet d&apos;expertise comptable et de conseil — casablanca 
           </p>
         </div>
       </section>
