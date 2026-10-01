@@ -57,7 +57,7 @@ export default function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-white/80">
             <li className="flex items-start gap-2">
               <MapPin size={16} className="mt-0.5 shrink-0" />
-              Partout dans le monde
+              Casablanca, Maroc
             </li>
             <li className="flex items-center gap-2">
               <Phone size={16} className="shrink-0" />
