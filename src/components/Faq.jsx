@@ -34,20 +34,25 @@ export default function Faq() {
       {ITEMS.map((item, index) => {
         const isOpen = open === index;
         return (
-          <div key={item.q} className="overflow-hidden rounded-2xl bg-white/10">
+          <div
+            key={item.q}
+            className="overflow-hidden rounded-2xl bg-white/10 transition-all duration-300 hover:bg-white/15"
+          >
             <button
               type="button"
-              className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-white"
+              className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-white transition hover:text-brand-light"
               onClick={() => setOpen(isOpen ? -1 : index)}
             >
               <h3 className="text-sm font-bold sm:text-base">{item.q}</h3>
               <ChevronDown
                 size={20}
-                className={`shrink-0 transition ${isOpen ? "rotate-180" : ""}`}
+                className={`shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180 text-brand-light" : ""}`}
               />
             </button>
             {isOpen && (
-              <div className="px-5 pb-5 text-sm leading-relaxed text-white/80">{item.a}</div>
+              <div className="animate-slide-down px-5 pb-5 text-sm leading-relaxed text-white/80">
+                {item.a}
+              </div>
             )}
           </div>
         );

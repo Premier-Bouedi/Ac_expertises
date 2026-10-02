@@ -18,21 +18,102 @@ body {
   background: #ffffff;
 }
 
+/* ── Keyframes ─────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulseBrand {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(35,164,245,.45); }
+  50%       { box-shadow: 0 0 0 10px rgba(35,164,245,0); }
+}
+
+/* ── Utility animation classes ─────────────────────── */
+.animate-fade-in   { animation: fadeIn  .55s ease both; }
+.animate-slide-up  { animation: slideUp .6s  ease both; }
+.animate-slide-down{ animation: slideDown .4s ease both; }
+.animate-scale-in  { animation: scaleIn .5s  ease both; }
+
+.delay-100 { animation-delay: .1s; }
+.delay-200 { animation-delay: .2s; }
+.delay-300 { animation-delay: .3s; }
+.delay-400 { animation-delay: .4s; }
+.delay-500 { animation-delay: .5s; }
+
+/* ── Card hover lift ───────────────────────────────── */
+.card-hover {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(13,43,110,.12);
+}
+
+/* ── Icon circle hover ─────────────────────────────── */
+.icon-hover {
+  transition: transform .2s ease, background-color .2s ease;
+}
+.icon-hover:hover {
+  transform: scale(1.12) rotate(-4deg);
+}
+
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-brand px-7 py-3 text-[15px] font-bold text-white transition hover:bg-brand-dark;
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-brand px-7 py-3 text-[15px] font-bold text-white shadow-md;
+    transition: background-color .2s ease, transform .2s ease, box-shadow .2s ease;
+    animation: pulseBrand 2.4s ease-in-out infinite;
+  }
+  .btn-primary:hover {
+    @apply bg-[#1a8cd8];
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(35,164,245,.4);
+    animation: none;
+  }
+  .btn-primary:active {
+    transform: translateY(0) scale(.98);
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white bg-transparent px-7 py-3 text-[15px] font-bold text-white transition hover:bg-white hover:text-brand;
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white bg-transparent px-7 py-3 text-[15px] font-bold text-white;
+    transition: background-color .2s ease, color .2s ease, transform .2s ease;
+  }
+  .btn-secondary:hover {
+    @apply bg-white text-brand;
+    transform: translateY(-2px);
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-brand bg-white px-7 py-3 text-[15px] font-bold text-brand transition hover:bg-brand hover:text-white;
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-brand bg-white px-7 py-3 text-[15px] font-bold text-brand;
+    transition: background-color .2s ease, color .2s ease, transform .2s ease;
+  }
+  .btn-outline:hover {
+    @apply bg-brand text-white;
+    transform: translateY(-2px);
   }
 
   .choice-card {
-    @apply relative flex h-full cursor-pointer flex-col rounded-2xl border-2 border-slate-200 bg-white p-5 text-left transition duration-200 hover:border-brand hover:shadow-lg;
+    @apply relative flex h-full cursor-pointer flex-col rounded-2xl border-2 border-slate-200 bg-white p-5 text-left;
+    transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+  }
+  .choice-card:hover {
+    @apply border-brand shadow-lg;
+    transform: translateY(-4px);
   }
 
   .section-kicker {
@@ -42,4 +123,21 @@ body {
   .section-title {
     @apply mt-3 text-3xl font-extrabold leading-tight text-navy md:text-4xl;
   }
+
+  /* Nav link underline animation */
+  .nav-link {
+    @apply relative text-white font-semibold;
+    transition: color .2s ease;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px; left: 0;
+    width: 0; height: 2px;
+    background: var(--brand-light);
+    border-radius: 2px;
+    transition: width .25s ease;
+  }
+  .nav-link:hover { color: var(--brand-light); }
+  .nav-link:hover::after { width: 100%; }
 }

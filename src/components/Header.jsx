@@ -47,9 +47,9 @@ export default function Header() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-7 text-sm font-semibold text-white lg:flex">
+        <nav className="hidden items-center gap-7 text-sm lg:flex">
           {NAV_LINKS.map((link) => (
-            <Link key={link.href} href={link.href} className="hover:text-brand-light">
+            <Link key={link.href} href={link.href} className="nav-link">
               {link.label}
             </Link>
           ))}
