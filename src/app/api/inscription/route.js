@@ -30,8 +30,8 @@ export async function POST(request) {
 
     try {
       const info = await transporter.sendMail({
-        from: `"AC Expertises - Devis" <${process.env.GMAIL_USER}>`,
-        to: process.env.GMAIL_USER, // Vous recevrez les devis à cette adresse
+        from: `"AC Expertises" <${process.env.GMAIL_USER}>`,
+        to: "Adamodessouza4545@gmail.com", // Adresse de réception des devis
         replyTo: payload.email, // Vous pourrez répondre directement au client
         subject: `[Devis AC Expertises] Nouvelle demande de ${payload.fullName || payload.email}`,
         text: `Nouveau devis demandé :\n\n- Nom / Prénom : ${payload.fullName || "Non renseigné"}\n- E-mail du client : ${payload.email}\n- Téléphone : ${payload.phone || "Non renseigné"}\n- Entreprise : ${payload.company || "Non renseigné"}\n- Nombre d'employés : ${payload.employees || "Non renseigné"}`,
