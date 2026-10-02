@@ -10,10 +10,15 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
+    "body-parser": "^2.3.0",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.5",
+    "express": "^5.2.1",
     "framer-motion": "^11.15.0",
     "lucide-react": "^0.468.0",
     "mysql2": "^3.24.5",
     "next": "^14.2.21",
+    "nodemailer": "^10.0.13",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.54.2",
@@ -25,5 +30,19 @@
     "eslint-config-next": "^14.2.21",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17"
-  }
+  },
+  "description": "Site web Next.js pour AC Expertises.",
+  "main": "tailwind.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Premier-Bouedi/Ac_expertises.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Premier-Bouedi/Ac_expertises/issues"
+  },
+  "homepage": "https://github.com/Premier-Bouedi/Ac_expertises#readme"
 }
