@@ -1,7 +1,8 @@
-import { Mail, MessageCircle } from "lucide-react";
+import { Mail, MessageCircle, Linkedin } from "lucide-react";
 
 const EMAIL = "Adamodessouza4545@gmail.com";
 const WHATSAPP = "https://wa.me/212603791489";
+const LINKEDIN = "https://www.linkedin.com/in/deogracia-nguelet-011b19125/";
 const GMAIL_COMPOSE = `https://mail.google.com/mail/?view=cm&to=${EMAIL}&su=Demande de renseignement - AC Expertises`;
 
 const iconBtn =
@@ -29,6 +30,16 @@ export default function ContactIcons({ className = "" }) {
         title="WhatsApp"
       >
         <MessageCircle size={22} />
+      </a>
+      <a
+        href={LINKEDIN}
+        target="_blank"
+        rel="noreferrer"
+        className={`${iconBtn} border-[#0A66C2] text-[#0A66C2] hover:border-[#0A66C2] hover:bg-[#0A66C2] hover:text-white`}
+        aria-label="Voir le profil LinkedIn"
+        title="LinkedIn"
+      >
+        <Linkedin size={22} />
       </a>
     </div>
   );
